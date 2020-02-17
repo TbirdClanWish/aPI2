@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using lll.Models;
+using Prometheus;
 
 namespace aPI2
 {
@@ -32,6 +33,7 @@ namespace aPI2
             services.AddDbContext<TaskDBContext>(options =>
                         options.UseSqlServer("Server=tcp:tbirdclanwish.database.windows.net,1433;Initial Catalog=Database1;Persist Security Info=False;User ID=tbirdclanwish;Password=Tfish12!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
             services.AddRazorPages();
+         
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,14 +45,15 @@ namespace aPI2
             }
        
           
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseHttpMetrics();
             app.UseAuthorization();
-
+           // app.UseMetricServer();
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapMetrics();
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
             });

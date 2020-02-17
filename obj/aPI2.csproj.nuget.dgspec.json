@@ -38,9 +38,37 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "App.Metrics": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "App.Metrics.AspNetCore.Core": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "App.Metrics.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "App.Metrics.AspNetCore.Tracking": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "App.Metrics.Extensions.Mvc": {
+              "target": "Package",
+              "version": "[1.2.1, )"
+            },
+            "App.Metrics.Formatters.Json": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
             "EntityFramework": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "Microsoft.ApplicationInsights.AspNetCore": {
+              "target": "Package",
+              "version": "[2.12.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -63,6 +91,30 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "OpenTelemetry": {
+              "target": "Package",
+              "version": "[0.2.0-alpha.179, )"
+            },
+            "OpenTelemetry.Collector.AspNetCore": {
+              "target": "Package",
+              "version": "[0.2.0-alpha.179, )"
+            },
+            "OpenTelemetry.Collector.Dependencies": {
+              "target": "Package",
+              "version": "[0.2.0-alpha.179, )"
+            },
+            "OpenTelemetry.Exporter.Zipkin": {
+              "target": "Package",
+              "version": "[0.2.0-alpha.179, )"
+            },
+            "OpenTelemetry.Hosting": {
+              "target": "Package",
+              "version": "[0.2.0-alpha.179, )"
+            },
+            "prometheus-net.AspNetCore": {
+              "target": "Package",
+              "version": "[3.4.0, )"
             }
           },
           "imports": [
